@@ -1,0 +1,157 @@
+/* stylelint-disable stylistic/selector-list-comma-newline-after */
+
+.blog-header-logo {
+  font-family: "Playfair Display", Georgia, "Times New Roman", serif
+    /*rtl:Amiri, Georgia, "Times New Roman", serif*/
+  ;
+  font-size: 2.25rem;
+}
+
+.blog-header-logo:hover {
+  text-decoration: none;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-family: "Playfair Display", Georgia, "Times New Roman", serif
+    /*rtl:Amiri, Georgia, "Times New Roman", serif*/
+  ;
+}
+
+.flex-auto {
+  flex: 0 0 auto;
+}
+
+.h-250 {
+  height: 250px;
+}
+
+@media (min-width: 768px) {
+  .h-md-250 {
+    height: 250px;
+  }
+}
+
+/* Pagination */
+.blog-pagination {
+  margin-bottom: 4rem;
+}
+
+/*
+   * Blog posts
+   */
+.blog-post {
+  margin-bottom: 4rem;
+}
+
+.blog-post-meta {
+  /* margin-bottom: 1.25rem; */
+  color: #727272;
+  display: inline-block;
+}
+
+.post-profile-img{
+  width: 24px;
+  border-radius: 50%;
+}
+
+
+input[type=file] {
+  width: 350px;
+  max-width: 100%;
+  color: #444;
+  padding: 5px;
+  background: #fff;
+  border-radius: 10px;
+  border: 1px solid #555;
+}
+
+input[type=file]::file-selector-button {
+  margin-right: 20px;
+  border: none;
+  background: #084cdf;
+  padding: 10px 20px;
+  border-radius: 10px;
+  color: #fff;
+  cursor: pointer;
+  transition: background .2s ease-in-out;
+}
+
+input[type=file]::file-selector-button:hover {
+  background: #0d45a5;
+}
+
+
+/* .bz {
+  fill: rgba(117, 117, 117, 1);
+}
+
+.by {
+  position: relative;
+}
+
+.bl {
+  font-size: 14px;
+}
+
+.al {
+  font-family: sohne, "Helvetica Neue", Helvetica, Arial, sans-serif;
+}
+
+.ai {
+  color: rgba(117, 117, 117, 1);
+}
+
+.ag {
+  line-height: 20px;
+}
+
+.o {
+  align-items: center;
+}
+
+.n {
+  display: flex;
+}
+
+.b {
+  font-weight: 400;
+}
+
+.at:hover {
+  fill: rgba(25, 25, 25, 1);
+} */
+
+
+/* .top-menu .dropdown {
+  margin-left: 18px;
+} */
+
+.top-menu .dropdown .dropdown-menu {
+  margin-top: 18px;
+}
+
+/* .ik {
+  font-family: iconkit!important;
+  speak: none;
+  font-style: normal;
+  font-weight: 400;
+  font-variant: normal;
+  text-transform: none;
+  line-height: 1;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+.dropdown-menu .dropdown-item .dropdown-icon {
+  display: inline-block;
+  vertical-align: middle;
+  font-size: 16px;
+  margin-right: 5px;
+  vertical-align: -2px;
+  color: #9aa0ac;
+} */

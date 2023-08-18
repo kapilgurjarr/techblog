@@ -1,0 +1,469 @@
+.bc {
+    font-weight: inherit;
+  }
+
+  .bb {
+    font-family: inherit;
+  }
+
+  .ba {
+    border: inherit;
+  }
+
+  .bz {
+    fill: rgba(117, 117, 117, 1);
+  }
+
+  .by {
+    position: relative;
+  }
+
+  .bl {
+    font-size: 14px;
+  }
+
+  .bh {
+    background: rgba(250, 250, 250, 1);
+  }
+
+  .bg {
+    width: 240px;
+  }
+
+  .bf {
+    border-radius: 20px;
+  }
+
+  .be {
+    border: none;
+  }
+
+  .br {
+    display: inline-block;
+  }
+
+  .bt {
+    margin-right: 12px;
+  }
+
+  .bs {
+    margin-left: 12px;
+  }
+
+  .bp {
+    color: rgba(41, 41, 41, 1);
+  }
+
+  .bo {
+    background-color: transparent;
+  }
+
+  .bn {
+    padding: 10px 20px 10px 0;
+  }
+
+  .bm {
+    width: 100%;
+  }
+
+  .bk {
+    outline: none;
+  }
+
+  .az {
+    font-size: inherit;
+  }
+
+  .ay {
+    color: inherit;
+  }
+
+  .ao {
+    cursor: pointer;
+  }
+
+  .an {
+    margin: 0;
+  }
+
+  .am {
+    letter-spacing: inherit;
+  }
+
+  .aj {
+    fill: inherit;
+  }
+
+  .w {
+    padding: 0;
+  }
+
+  a,
+  button,
+  input {
+    -webkit-tap-highlight-color: transparent;
+  }
+
+  a {
+    color: inherit;
+    text-decoration: none;
+  }
+
+  .a {
+    font-family: medium-content-sans-serif-font, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
+  }
+
+  .ah {
+    margin-left: 8px;
+}
+
+  .at:hover {
+    fill: rgba(25, 25, 25, 1);
+  }
+
+
+
+  .al {
+    font-family: sohne, "Helvetica Neue", Helvetica, Arial, sans-serif;
+  }
+
+  .ai {
+    color: rgba(117, 117, 117, 1);
+  }
+
+  .ag {
+    line-height: 20px;
+  }
+
+  .o {
+    align-items: center;
+  }
+
+  .n {
+    display: flex;
+  }
+
+  .b {
+    font-weight: 400;
+  }
+
+  .bd {
+    margin-left: 16px;
+  }
+
+.bl {
+    font-size: 14px;
+}
+
+.bz {
+  fill: rgba(117, 117, 117, 1);
+}
+.by {
+  position: relative;
+}
+
+  .bx {
+    margin-right: 32px;
+}
+
+.bbx{
+  margin-right: 18px;
+}
+
+.ku {
+  text-align: left;
+}
+
+.ra {
+  padding-bottom: 32px;
+}
+
+.rk {
+  margin-top: 52px;
+}
+.rj {
+  margin-bottom: 48px;
+}
+.rp {
+  margin-bottom: 56px;
+}
+
+.sj {
+  letter-spacing: -0.011em;
+}
+.si {
+  max-height: 52px;
+}
+.sh {
+  line-height: 52px;
+}
+.sg {
+  font-size: 42px;
+}
+.gg {
+  word-break: break-all;
+}
+.gf {
+  -webkit-box-orient: vertical;
+}
+.ge {
+  -webkit-line-clamp: 1;
+}
+.gd {
+  display: -webkit-box;
+}
+.gc {
+  text-overflow: ellipsis;
+}
+.ga {
+  overflow: hidden;
+}
+.fh {
+  font-weight: 500;
+}
+
+wi {
+  font-size: 20px;
+}
+.oo {
+  line-height: 24px;
+}
+.gk {
+  font-weight: 700;
+}
+.fj {
+  letter-spacing: 0;
+}
+
+.vd {
+  width: 552px;
+}
+.vc {
+  box-shadow: rgba(0, 0, 0, 0.15) 0px 2px 10px;
+}
+.vb {
+  padding: 32px 40px 40px;
+}
+.qm {
+  border-radius: 4px;
+}
+.by {
+  position: relative;
+}
+.c {
+  background-color: rgba(255, 255, 255, 1);
+}
+
+
+.s {
+  display: block;
+}
+
+.ss {
+  margin: 32px 0px;
+}
+
+  img,
+  svg {
+    vertical-align: middle;
+  }
+
+  .bi path {
+    fill: rgba(117, 117, 117, 1);
+  }
+
+  .mv {
+    margin: 0px 4px;
+}
+
+  .na {
+    padding-bottom: 8px;
+}
+.ob {
+    font-family: source-serif-pro, Georgia, Cambria, "Times New Roman", Times, serif;
+}
+
+.dd {
+  max-width: 680px;
+  margin: auto;
+}
+
+.sx{
+  font-size: 42px;
+  margin-bottom: -0.27em;
+  letter-spacing: -0.011em;
+  line-height: 52px;
+  margin-top: 1.19em;
+}
+
+a:hover{
+    text-decoration: none;
+    color: inherit;
+}
+
+  .category {
+    background-color: #efefef;
+  }
+
+  .container-f {
+    width: 100%;
+    /* background-color: black; */
+    /* position: sticky;
+    top: 0; */
+  }
+
+  .m-d{
+    margin-right: 4px;
+  }
+  .lh-1 {
+    padding: 0 10px;
+  }
+
+  .pt-1 {
+    padding-bottom: 0.25rem !important;
+  }
+  .formet{
+    line-height: 24px;
+    font-size: 20px;
+    font-weight: 700;
+    max-height: 72px;
+    color: black;
+  }
+
+  .dkpn{
+    font-size: 22px;
+  }
+
+
+  .post-desc{
+    display: flex;
+    }
+    
+    .post-img{
+    margin-left: 60px;
+    }
+    
+    .post-img img{
+      width: 112px;
+        aspect-ratio: auto 112 / 112;
+        height: 112px;
+    }
+
+
+  .comment-input{
+    border: none;
+    border-bottom: 1px solid #BBB;
+  }
+
+
+
+  .lk-btn{
+    width: 100%;
+    display: flex;
+    border: inherit;
+    cursor: pointer;
+    color: #6B6B6B;
+    align-items: center;
+    justify-content: space-between;
+    background: transparent;
+    overflow: visible;
+    font-size: 14px;
+    font-weight: inherit;
+    font-family: inherit;
+    cursor: pointer;
+    letter-spacing: inherit;
+    fill: inherit;
+    padding: 0;
+  }
+
+  .lk-btn:hover {
+    fill: rgba(25, 25, 25, 1);
+}
+
+
+/* modal css */
+
+.mw {
+  font-size: 20px;
+}
+.mx {
+  line-height: 24px;
+}
+.il {
+  letter-spacing: 0;
+}
+.ij {
+  font-weight: 700;
+}
+.bj {
+  color: #242424;
+}
+.be {
+  font-family: sohne, "Helvetica Neue", Helvetica, Arial, sans-serif;
+}
+.my {
+  margin-top: 20px;
+}
+.l {
+  display: block;
+}
+.ig {
+  flex-direction: column;
+}
+.bg {
+  width: 100%;
+}
+.ab {
+  display: flex;
+}
+.mz {
+  border-width: 0px 0px 1px;
+}
+.brd{
+  border-bottom: 1px solid black;
+}
+.naa {
+  border-color: rgb(229, 229, 229);
+}
+.bbnn{
+  border: none;
+}
+.hs {
+  margin-top: 4px;
+}
+.hf {
+  justify-content: space-between;
+}
+.do {
+  font-size: 13px;
+}
+.dn {
+  color: #6B6B6B;
+}
+.be {
+  font-family: sohne, "Helvetica Neue", Helvetica, Arial, sans-serif;
+}
+.z {
+  line-height: 20px;
+}
+
+.ue{
+  flex: 1 1 0%;
+    outline: 0px;
+    border-width: 0px;
+    text-align: inherit;
+    line-height: inherit;
+    padding: 4px 0px;
+    font-family: inherit;
+    font-weight: inherit;
+    font-size: inherit;
+}
+.modal-content1{
+  width: 552px;
+    box-shadow: rgba(0, 0, 0, 0.15) 0px 2px 10px;
+    padding: 0px 20px 20px;
+    position: relative;
+    border-radius: 4px;
+    display: block;
+    background-color: rgba(255, 255, 255, 1);
+}

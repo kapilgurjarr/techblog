@@ -1,0 +1,41 @@
+{% extends 'blog/base.html' %}
+{% load static %}
+
+{% block style %}
+    .center-column{
+        width:600px;
+        margin: 20px auto;
+        padding:20px;
+        background-color: #fff;
+        border-radius: 3px;
+        box-shadow: 6px 2px 30px 0px rgba(0,0,0,0.75);
+    }
+    .col-auto{
+    margin: 20px auto;
+    padding:20px;
+    border-radius: 3px;
+    /* box-shadow: 6px 2px 30px 0px rgba(0,0,0,0.75); */
+
+    }
+    form{
+        display: inline-flex;
+        float: right;
+    }
+{% endblock style %}
+
+{% block containt %}
+<div class="container">
+    <div class="center-column">
+        <p>Are you sure you want to delete your account ?</p>
+        <div>
+            <a class="btn btn-primary" href="{% url 'accounts:user-setting' %}">Cancel</a>
+            <!-- <a href="/" >Cancel</a> -->
+            <form method="POST" action="{% url 'accounts:deactivate-user-account' %}">
+                {% csrf_token %}
+                <input type="submit" name="Confirm" class="btn btn-primary" value="Confirm" style="margin-top: -38; margin-left: 90px; margin-bottom: 0px;">
+            </form>
+        </div>
+
+    </div>
+</div>
+{% endblock containt %}

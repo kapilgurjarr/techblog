@@ -1,0 +1,375 @@
+/* *{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: 'Open Sans', sans-serif;
+    list-style: none;
+} */
+
+/* body{
+    background-color: lightgrey;
+} */
+
+
+/* logo css */
+.logo-text{
+    font-size: x-large;
+    font-weight: bolder;
+    text-decoration: underline;
+    font-style: italic!important;
+    color: #212121;
+}
+
+
+/*------------------- HEADER_CABECALHO -----------------*/
+#cabecalho
+{
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    min-height: 54px;
+    /*border: 1px solid grey;*/
+    display: flex;
+    align-items: center;
+    background-color: white;
+}
+
+/* .container{
+    max-width: 1300px;
+    margin: 0 auto;
+    padding: 0 10px;
+} */
+
+.container-cabecalho
+{
+    width:100%;
+    display: flex;
+    justify-content: space-between;
+}
+
+#menu{
+    list-style: none;
+    display: flex;
+}
+
+#menu li{
+    margin-left: 10px;
+}
+
+#menu li a, #cabecalho a{
+    text-decoration: none;
+    color: rgb(63, 63, 63);
+}
+
+
+#logo{
+    font-weight: bold;
+    font-size: 19px;
+}
+/*------------------- BANNER -----------------*/
+
+#banner{
+    margin-top: 54px;
+    width: 100%;
+    height: 400px;
+   /* border: 1px solid grey;*/
+    background-image: url(img/montanha2.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+}
+
+.container-main{
+    display: flex;
+   /* border: 1px solid grey;*/
+}
+
+main{
+    padding: 0 5px;
+    width: 70%;
+    /*border: 1px solid grey;*/
+}
+
+/* aside{
+    padding: 0 5px;
+    width: 30%;
+} */
+
+.container-main article{
+    /*border: 1px solid grey;*/
+    padding: 10px;
+    background-color: white;
+    margin: 15px 0;
+}
+
+
+.container-main article span{
+    font-size: 14px;
+    display: inline-block;
+    margin-bottom: 10px;
+    color: grey;
+}
+
+.container-main article img{
+    width: 100%;
+    height: 400px;
+    object-fit: cover;
+}
+
+
+
+.container-main article p{
+    text-align: justify;
+    text-indent: 20px;
+    line-height: 25px;
+}
+
+.container-main article a{
+    display: inline;
+    text-decoration: none;
+    margin: 10px 0;
+}
+
+.aside-item{
+    margin: 15px 0;
+    background-color: white;
+}
+
+.aside-item h2{
+    color: rgba(41, 41, 41, 1);
+    /* text-align: center; */
+    font-size: 20px;
+    font-weight: 500;
+    padding: 5px 0;
+    line-height: 20px;
+}
+
+.aside-item p{
+    padding: 10px;
+}
+
+
+/*Sobre mim*/
+
+#sobreMim img {
+    display: block;
+    width: 150px;
+    height: 150px;
+    margin: 5px auto;
+    border-radius: 50%;
+    object-fit: cover;
+}
+
+#sobreMim h3 {
+    text-align: center;
+    color: rgba(41, 41, 41, 1);
+    font-size: 22px;
+    font-weight: 500;
+    padding: 5px 0;
+    line-height: 20px;
+}
+
+#sobreMim a {
+    display: block;
+    color: #1A8917;
+    text-align: center;
+    font-size: 12px;
+    font-weight: 500;
+    padding: 5px 0;
+    line-height: 20px;
+}
+
+#sobreMim p {
+    text-align: justify;
+    text-indent: 20px;
+    font-weight:400;
+    color: rgb(34, 33, 33);
+    font-size: 14px;
+    font-family: sohne, "Helvetica Neue", Helvetica, Arial, sans-serif;
+}
+
+/*categorias*/
+
+#categorias-links{
+    padding: 5px;
+}
+#categorias-links ul li a {
+    display: flex;
+    justify-content: space-between;
+    text-decoration: none;
+    color: black;
+    padding: 5px 0;
+}
+
+#categorias-links ul li a{
+    font-weight:400;
+    color: rgb(34, 33, 33);
+    font-size: 14px;
+    font-family: sohne, "Helvetica Neue", Helvetica, Arial, sans-serif;
+}
+
+#categorias-links ul li a span {
+   padding: 2px;
+   background-color: grey;
+   color: white;
+}
+
+#categorias-links ul li a:hover{
+    color: black;
+    font-size: 15px;
+    font-weight:500;
+}
+
+
+#tags-popular{
+    padding: 5px;
+}
+
+.single-tag{
+    display: inline-block;
+    margin: 0px 2px;
+}
+
+
+#tags-popular a
+{
+    display: inline-block;
+    text-decoration: none;
+    color: rgb(34, 33, 33);
+    background-color: rgba(242, 242, 242, 1);
+    padding: 8px 16px;
+    border: 1px solid rgb(242, 242, 242);
+    border-radius: 100px;
+    margin: 5px 0;
+    font-size: 14px;
+    font-family: sohne, "Helvetica Neue", Helvetica, Arial, sans-serif;
+    line-height: 20px;
+    font-weight: 400;
+}
+ 
+
+#tags-popular a:hover{
+    background-color: rgb(230, 230, 230);
+}
+
+
+/*FOOTER*/
+footer{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: white;
+    padding: 15px;
+   /* margin-top: 15px;*/
+}
+
+footer a{
+    text-decoration: none;
+    color: green;
+}
+
+footer a:hover{
+    text-decoration: underline;
+}
+
+@media (max-width: 700px)
+{
+    .container-main   {
+        flex-direction: column;
+    }
+
+    .container-main article img{
+        width: 100%;
+        height: 300px;
+    }
+
+    main,aside{
+        width: 95%;
+        margin-left: auto;
+        margin-right: auto;
+    }
+    
+    .aside-item,.container-main article
+    {
+        margin-top: 15px;
+    }
+
+    .aside-item{margin-bottom: 15px;}
+
+    #sobreMim img {width: 200px; height: 200px;}
+}   
+
+
+/* search containt css */
+
+@import url(https://fonts.googleapis.com/css?family=Lato:100,300,400,700);
+@import url(https://raw.github.com/FortAwesome/Font-Awesome/master/docs/assets/css/font-awesome.min.css);
+
+/* body {
+	background: #DDD;
+	font-size: 15px;
+} */
+#wrap {
+  margin: 10px 32px;
+  display: inline-block;
+  position: relative;
+  height: 24px;
+  float: right;
+  padding: 0;
+  position: relative;
+}
+
+#search {
+  height: 24px;
+  font-size: 15px;
+  display: inline-block;
+  font-family: "Lato";
+  font-weight: 100;
+  border: none;
+  outline: none;
+  color: #555;
+  padding: 3px;
+  padding-right: 60px;
+  width: 0px;
+  position: absolute;
+  top: 0;
+  right: 0;
+  background: none;
+  z-index: 3;
+  transition: width .4s cubic-bezier(0.000, 0.795, 0.000, 1.000);
+  cursor: pointer;
+}
+
+#search:focus:hover {
+  border-bottom: 1px solid #BBB;
+}
+
+#search:focus {
+  width: 500px;
+  z-index: 1;
+  border-bottom: 1px solid #BBB;
+  cursor: text;
+}
+#search_submit {
+  height: 24px;
+  width: 24px;
+  display: inline-block;
+  color:red;
+  float: right;
+  background: url('/static/blog/img/search.svg') center center no-repeat;
+  text-indent: -10000px;
+  border: none;
+  position: absolute;
+  top: 0;
+  right: 0;
+  z-index: 2;
+  cursor: pointer;
+  opacity: 0.4;
+  cursor: pointer;
+  transition: opacity .4s ease;
+}
+
+#search_submit:hover {
+  opacity: 0.8;
+}

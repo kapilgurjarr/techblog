@@ -1,0 +1,28 @@
+{% autoescape off %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Verify Email</title>
+</head>
+<body>
+    <h3>
+        Hi {{ user }},
+    </h3>
+        <h3>Thanks for signing up to TechBlog!</h3><br><br>
+        To verify your email, Please click on the link to confirm your registration,
+        click the link below:
+    <br><br>
+    <a href="{{ protocol }}://{{ domain }}{% url 'email-activate' uidb64=uid token=token %}">
+        {{ protocol }}://{{ domain }}{% url 'email-activate' uidb64=uid token=token %}
+    </a>
+    <br><br>
+    If clicking the link above doesn't work, please copy and paste the URL in a new browser
+    window instead.
+    
+</body>
+</html>
+
+{% endautoescape %}

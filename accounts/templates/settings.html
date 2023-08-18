@@ -1,0 +1,257 @@
+{% extends 'blog/base.html' %}
+{% load static %}
+
+{% block style %}
+.deactive a span{
+color: rgb(201, 74, 74);
+font-size: 14px;
+font-family: sohne, "Helvetica Neue", Helvetica, Arial, sans-serif;
+line-height: 20px;
+font-weight: 400;
+cursor: pointer;
+}
+
+.deactive-text{
+margin-top: 4px;
+color: rgba(117, 117, 117, 1);
+
+}
+
+.line{
+border-bottom: 1px solid rgb(230, 230, 230);
+height: 0px;
+width: 100%;
+}
+
+
+{% endblock style %}
+
+{% block containt %}
+
+<!-- Vertically centered modal -->
+<div class="modal fade" id="updateEmail" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1"
+    aria-labelledby="staticBackdropLabel" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered">
+        <div class="modal-dialog">
+            <div class="modal-content1">
+                <div class="modal-header bbnn">
+                    <h1 class="be ij mw mx il bj" id="staticBackdropLabel">Email address</h1>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <div class="l">
+                        <span class="be b bf z bj">
+                            <div class="bg ab ig">
+                                <div class="ab bg mo mz naa brd">
+                                    <input class="ue" type="email" name="email" id="" value="{{UserInfo.email}}">
+                                </div>
+                                <div class="hs ab hf">
+                                    <p class="be b do z dn">
+                                        You can sign into Medium with this email address.
+                                    </p>
+                                </div>
+                            </div>
+
+                        </span>
+                    </div>
+                </div>
+                <div class="modal-footer bbnn">
+                    <button type="button" class="btn btn-outline-success">Close</button>
+                    <button type="button" class="btn btn-success">Save</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+</div>
+
+
+{% comment %} <div class="container-fluid p-4 p-md-5 mb-4 rounded text-body-emphasis bg-body-secondary">
+    <div class="col-lg-6 px-0">
+        <h1 class="display-4 fst-italic">Title of a longer featured blog post</h1>
+        <p class="lead my-3">Multiple lines of text that form the lede, informing new readers quickly and efficiently
+            about what’s most interesting in this post’s contents.</p>
+        <p class="lead mb-0"><a href="#" class="text-body-emphasis fw-bold">Continue reading...</a></p>
+    </div>
+</div> {% endcomment %}
+<main class="container">
+    <div class="container-sm" style="width:1000px">
+
+
+        <div class="row g-5">
+            <div class="col-md-8">
+                <article style="margin-right: 40px;">
+                    <div class="ra s">
+                        <div class="rk rj s">
+                            <div class="rp s">
+                                <div class="s">
+                                    <h1
+                                        class="al fh rq rr rs rt ru rv rw rx ry rz sa sb sc sd se sf sg sh si sj ga gc gd ge gf gg gh bp">
+                                        Update Profile
+                                    </h1>
+                                </div>
+
+                            </div>
+
+                        </div>
+
+
+                        <button class="lk-btn ku ss bl" data-bs-toggle="modal" data-bs-target="#updateEmail">
+                            <span>
+                                <span class="bp">Email</span>
+                            </span>
+                            <span>
+                                <span class="ai">{{UserInfo.email}}</span>
+                            </span>
+                        </button>
+
+                        <button class="lk-btn ku ss bl">
+                            <span>
+                                <span class="bp">Username</span>
+                            </span>
+                            <span>
+                                <span class="ai">{{UserInfo.username}}</span>
+                            </span>
+                        </button>
+
+                        <button class="lk-btn ku ss bl">
+                            <span>
+                                <span>
+                                    <span class="bp">Profile information</span>
+
+                                    <div class="al ai">
+                                        <span style="font-size: 10px;">Edit your photo, name, bio, etc. </span>
+                                    </div>
+                                </span>
+                            </span>
+                            <span>
+                                <span class="ai">{{UserInfo.first_name}}{{UserInfo.last_name}}</span>
+                                {% if user_profile.profile_img %}
+                                <img class="post-profile-img" style="margin-left: 12px;"
+                                    src="{{user_profile.profile_img.url}}" alt="">
+                                {% else %}
+                                <img class="post-profile-img" style="margin-left: 12px;"
+                                    src="{% static 'blog/profile_img/user.svg' %}" alt="">
+                                {% endif %}
+                            </span>
+                        </button>
+                        <div class="line"></div>
+                        <div class="ss">
+                            <div class="deactive">
+                                <a href="{% url 'accounts:deactivate-user-account' %}"><span>Deactivate
+                                        account</span></a>
+                            </div>
+                            <div class="deactive-text">
+                                <span>Deactivating will suspend your account until you sign back in.</span>
+                            </div>
+                        </div>
+                        <div class="ss">
+                            <div class="deactive">
+                                <a href=""><span>Delete account</span></a>
+                            </div>
+                            <div class="deactive-text">
+                                <span>Permanently delete your account and all of your content.</span>
+                            </div>
+                        </div>
+
+                    </div>
+
+
+                </article>
+
+            </div>
+
+            {% comment %} <div class="col-md-8">
+                <article style="margin-right: 40px;">
+                    <div class="post">
+                        <div class="row g-5">
+                            <div class="col-md-6">
+                                <div style="margin: 32px 0px;">
+                                    <p style="font-size: 14px;"><span>Username</span></p>
+                                </div>
+                                <div style="margin: 32px 0px;">
+                                    <p style="font-size: 14px;"><span>Email</span></p>
+                                </div>
+                                <div style="margin: 32px 0px;">
+                                    <span>
+                                        <span style="font-size: 14px;">Profile information</span>
+
+                                        <div class="al ai">
+                                            <span style="font-size: 10px;">Edit your photo, name, bio, etc. </span>
+                                        </div>
+                                    </span>
+                                </div>
+                            </div>
+                            <div class="col-md-6" style="text-align: end;">
+                                <div style="margin: 32px 0px;">
+                                    <p style="font-size: 14px;">
+                                        <span class="ai">{{UserInfo.username}}</span>
+                                    </p>
+                                </div>
+                                <div style="margin: 32px 0px;">
+                                    <p style="font-size: 14px;">
+                                        <span class="ai">{{UserInfo.email}}</span>
+                                    </p>
+                                </div>
+                                <div style="margin: 32px 0px;">
+                                    <p style="font-size: 14px;">
+                                        <span class="ai">{{UserInfo.first_name}}{{UserInfo.last_name}}</span>
+                                        {% if user_profile.profile_img %}
+                                        <img class="post-profile-img" style="margin-left: 12px;"
+                                            src="{{user_profile.profile_img.url}}" alt="">
+                                        {% else %}
+                                        <img class="post-profile-img" style="margin-left: 12px;"
+                                            src="{% static 'blog/profile_img/user.svg' %}" alt="">
+                                        {% endif %}
+                                    </p>
+                                </div>
+                            </div>
+                            <div>
+                                <div class="d-flex justify-content-center" style="margin: 32px 0px;">
+                                    <button type="button"
+                                        class="btn btn-success btn-block btn-lg gradient-custom-4 text-body">Update</button>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="line"></div>
+                        <div style="margin: 32px 0px;">
+                            <div class="deactive">
+                                <a href="{% url 'accounts:deactivate-user-account' %}"><span>Deactivate
+                                        account</span></a>
+                            </div>
+                            <div class="deactive-text">
+                                <span>Deactivating will suspend your account until you sign back in.</span>
+                            </div>
+                        </div>
+                        <div style="margin: 32px 0px;">
+                            <div class="deactive">
+                                <a href=""><span>Delete account</span></a>
+                            </div>
+                            <div class="deactive-text">
+                                <span>Permanently delete your account and all of your content.</span>
+                            </div>
+                        </div>
+
+                    </div>
+                </article>
+            </div> {% endcomment %}
+            <div class="col-md-4" style="border-left: 1px solid rgba(242, 242, 242, 1);">
+                <aside>
+
+                    {% if user.is_authenticated and not user.is_superuser %}
+                    <div class="aside-item" id="sobreMim">
+                        {% if user_profile.profile_img %}
+                        <img src="{{user_profile.profile_img.url}}" alt="">
+                        {% else %}
+                        <img src="{% static 'blog/profile_img/user.svg' %}" alt="">
+                        {% endif %}
+                        <h3 class="al">{{UserInfo.first_name}}{{UserInfo.last_name}}</h3>
+                        <a href="">Edit profile</a>
+                    </div>
+                    {% endif %}
+                </aside>
+                <div>
+                </div>
+            </div>
+</main>
+{% endblock containt %}

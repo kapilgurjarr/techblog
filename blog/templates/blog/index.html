@@ -1,0 +1,101 @@
+{% extends 'blog/base.html' %}
+{% load static %}
+
+{% block style %}
+
+
+
+{% endblock style %}
+
+{% block containt %}
+<div class="container-fluid p-4 p-md-5 mb-4 rounded text-body-emphasis bg-body-secondary">
+  <div class="col-lg-6 px-0">
+    <h1 class="display-4 fst-italic">Title of a longer featured blog post</h1>
+    <p class="lead my-3">Multiple lines of text that form the lede, informing new readers quickly and efficiently
+      about what’s most interesting in this post’s contents.</p>
+    <p class="lead mb-0"><a href="#" class="text-body-emphasis fw-bold">Continue reading...</a></p>
+  </div>
+</div>
+<main class="container">
+  
+
+  <div class="row g-5">
+    <div class="col-md-8">
+      {% for post in posts %}
+      <hr style="opacity: 1;">
+      <article>
+        <div class="post">
+          <div class="auther">
+            <a href="">
+              {% if post.auther.userprofile.profile_img %}
+              <img class="post-profile-img" src="{{post.auther.userprofile.profile_img.url}}" alt="">
+              {% else %}
+              <img class="post-profile-img" src="{% static 'blog/profile_img/user.svg' %}" alt="">
+              {% endif %}
+            <p class="blog-post-meta bl">{{post.auther.first_name}} {{post.auther.last_name}}
+            </p>
+          </a>
+          <p class="blog-post-meta bl">
+            <span class="mv">·</span>
+            <span>{{post.publish_date|date}}</span>
+            </p>
+          </div>
+          <div class="post-desc">
+            <a href="{% url 'blog:post-detail' post.slug %}">
+              <div class="na">
+                <h3 class="display-5 link-body-emphasis mb-1 al formet">{{post.title|title}}</h3>
+              </div>
+              <div>
+                <p class="ob">{{post.description|striptags|truncatechars:200}}</p>
+              </div>
+            </a>
+            <div class="post-img">
+              {% if post.image %}
+              <img src="{{post.image.url}}">
+              {% endif %}
+            </div>
+          </div>
+        </div>
+      </article>
+      {% endfor %}
+    </div>
+    <div class="col-md-4">
+      <aside>
+        {% comment %} <hr>
+        {% if user.is_authenticated and not user.is_superuser %}
+        <div class="aside-item" id="sobreMim">
+            <h2 class="al">Sobre Mim</h2>
+            <img src="{{user.userprofile.profile_img.url}}" alt="">
+            <h3 class="al">{{user.first_name}}</h3>
+            <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Minima obcaecati nam explicabo distinctio dicta, atque, odio sint voluptatem molestias optio culpa rem recusandae assumenda tenetur fugit? Accusamus voluptas voluptatem nostrum.</p>
+        </div>
+        {% endif %} {% endcomment %}
+        <hr style="opacity: 1;">
+        <div class="aside-item">
+            <h2 class="al">Categorias</h2>
+            <nav id="categorias-links">
+                <ul>
+                    <li><a href="#categoria">Montanhas<span>42</span></a></li>
+                    <li><a href="#categoria">Sonhos<span>09</span></a></li>
+                    <li><a href="#categoria">Animais<span>15</span></a></li>
+                    <li><a href="#categoria">Viagens<span>23</span></a></li>
+                </ul>
+            </nav>
+           
+        </div>
+        <hr style="opacity: 1;">
+        <div class="aside-item">
+            <h2 class="al">Populares Topics</h2>
+            <nav id="tags-popular">
+              {% for tag in tags %}
+                <a href="#tag">{{tag|title}}</a>
+              {% endfor %}
+            </nav>
+
+        </div>
+    </aside>
+      <div>
+  </div>
+
+</main>
+{% endblock containt %}
