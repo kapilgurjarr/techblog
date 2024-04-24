@@ -1,4 +1,4 @@
-taggit==0.23.1
+taggit==1.2.0
 
 celery==5.3.0
 
