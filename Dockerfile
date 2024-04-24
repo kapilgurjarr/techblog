@@ -1,20 +1,27 @@
 # Use an official Python runtime as a parent image
-FROM python:3.8-slim
+FROM python:3.8.10-slim
+
+# Create a non-root user to run the application
+RUN useradd -m appuser
+USER appuser
 
 # Set the working directory inside the container
 WORKDIR /app
 
-# Copy the contents of the local src directory to the container at /app
-COPY . /app
+# Copy requirements first for better caching
+COPY requirements.txt /app/
 
-# Install any needed packages specified in requirements.txt
+# Install required packages
 RUN pip install --no-cache-dir -r requirements.txt
 
-# Make port 80 available to the world outside this container
+# Now copy the rest of the application code
+COPY . /app
+
+# Expose the port for external access
 EXPOSE 80
 
-# Define environment variable
+# Define environment variables (you can add more as needed)
 ENV NAME World
 
-# Command to run on container start
-CMD ["python", "manage.py", "runserver", "0.0.0.0:80"]
+# Command to run the application
+CMD ["python", "manage.py", "runserver", "0.0.0.0:80"] 
