@@ -15,4 +15,4 @@ redis==4.5.5              # Redis client for Python
 Pillow==9.5.0             # Python Imaging Library (Pillow)
 
 # Utility packages
-six==1.16.0               # Compatibility between Python 2 and 3
+# six==1.16.0               # Compatibility between Python 2 and 3
