@@ -4,27 +4,29 @@ FROM python:3.8-slim
 # Create a non-root user for security
 RUN useradd -m appuser
 
-# Switch to the created user
+# Switch to the non-root user
 USER appuser
 
 # Set the working directory
 WORKDIR /app
 
-# Add user-specific binary path to PATH
+# Add the user-specific binary path to PATH
 ENV PATH="/home/appuser/.local/bin:${PATH}"
 
-# Copy requirements and upgrade pip
+# Copy the requirements file
 COPY requirements.txt /app/
-RUN /usr/local/bin/python -m pip install --upgrade pip  # Explicit path
 
-# Install requirements
+# Upgrade pip to avoid outdated issues
+RUN /usr/local/bin/python -m pip install --upgrade pip  # Explicit path to ensure correct pip installation
+
+# Install the Python dependencies
 RUN /usr/local/bin/python -m pip install --no-cache-dir -r requirements.txt
 
 # Copy the rest of the application code
 COPY . /app/
 
-# Expose the appropriate port for the server
-EXPOSE 80
+# Expose the port the application will use
+EXPOSE 9075
 
-# Define the command to run the application
-CMD ["python", "manage.py", "runserver", "0.0.0.0:80"]
+# Define the command to start the application
+CMD ["python", "manage.py", "runserver", "0.0.0.0:9075"]
